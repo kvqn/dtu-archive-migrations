@@ -1,6 +1,6 @@
 # DTU Archive Scraping and Migration Tool
 
-A command line utility for scraping (and migrating) results published by Delhi Technological Univesity.
+Command line utility for scraping (and migrating) results published by Delhi Technological Univesity.
 
 This is a utility I made for internal use to create the database for [DTU Archive](https://github.com/kvqn/dtu-archive) but decided to make it and the migrations public for transparency and convinience.
 
