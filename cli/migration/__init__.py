@@ -1,4 +1,4 @@
-import mariadb
+import pymysql
 import os
 import dotenv
 
@@ -9,7 +9,7 @@ dotenv.load_dotenv()
 MIGRATIONS_FOLDER = str(os.getenv("DTUARCHIVE_MIGRATIONS_FOLDER"))
 
 MARIADB_USER = os.getenv("DTUARCHIVE_MARIADB_USER")
-MARIADB_PASS = os.getenv("DTUARCHIVE_MARIADB_PASS")
+MARIADB_PASS = str(os.getenv("DTUARCHIVE_MARIADB_PASS"))
 MARIADB_HOST = os.getenv("DTUARCHIVE_MARIADB_HOST")
 MARIADB_PORT = int(str(os.getenv("DTUARCHIVE_MARIADB_PORT")))
 MARIADB_DB = os.getenv("DTUARCHIVE_MARIADB_DB")
@@ -20,7 +20,7 @@ MARIADB_DB = os.getenv("DTUARCHIVE_MARIADB_DB")
 # BACKUP_MARIADB_PORT = int(str(os.getenv("DTUARCHIVE_BACKUP_MARIADB_PORT")))
 # BACKUP_MARIADB_DB = os.getenv("DTUARCHIVE_BACKUP_MARIADB_DB")
 
-_conn = mariadb.connect(
+_conn = pymysql.connect(
     database=MARIADB_DB,
     user=MARIADB_USER,
     password=MARIADB_PASS,

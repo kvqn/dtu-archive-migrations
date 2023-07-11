@@ -1,9 +1,8 @@
 from dotenv import load_dotenv
-import mariadb
+import pymysql
 import os
 from . import Student
 import traceback
-import sys
 
 
 def push_to_db(result_name : str, students : list[Student], semester: int, heirarchy: str):
@@ -24,7 +23,7 @@ def push_to_db(result_name : str, students : list[Student], semester: int, heira
             print("Error in connecting to database. Check environment variables.")
             return
 
-        conn = mariadb.connect(
+        conn = pymysql.connect(
             database=MARIADB_DB,
             user=MARIADB_USER,
             password=MARIADB_PASS,
