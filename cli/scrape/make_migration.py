@@ -4,7 +4,7 @@ from . import Student
 
 load_dotenv()
 
-MIGRATIONS_FOLDER = os.getenv("DTUARCHIVE_MIGRATIONS_FOLDER")
+MIGRATIONS_FOLDER = "migrations"
 if MIGRATIONS_FOLDER is None:
     print("Missing environment variable : DTUARCHIVE_MIGRATIONS_FOLDER")
     exit(1)

@@ -6,7 +6,7 @@ dotenv.load_dotenv()
 
 # Environment variables
 
-MIGRATIONS_FOLDER = str(os.getenv("DTUARCHIVE_MIGRATIONS_FOLDER"))
+MIGRATIONS_FOLDER = "migrations"
 
 MARIADB_USER = os.getenv("DTUARCHIVE_MARIADB_USER")
 MARIADB_PASS = str(os.getenv("DTUARCHIVE_MARIADB_PASS"))

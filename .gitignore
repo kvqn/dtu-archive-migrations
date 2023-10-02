@@ -2,4 +2,4 @@
 pdfs
 
 **/__pycache__/**
-
+.env
