@@ -25,7 +25,7 @@ def cli_main(args):
     from .complete import complete_conversion
     if args.subcommand == "create-excel":
         students = complete_conversion(args.pdf, args.y_density, args.make_intermediate_files, args.text)
-        excel_output_path = args.pdf.replace(".pdf", ".xlsx")
+        excel_output_path = args.pdf.replace(".pdf", ".xlsx").replace(".txt", ".xlsx")
         excel.to_excel(*students, excel_output_path)
 
     elif args.subcommand == "make-migrations":

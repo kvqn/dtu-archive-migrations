@@ -70,6 +70,8 @@ REMOVE_REGEXES = [
     r"^.*Improving Deep Neural Networks.*$",
     r"^.*Machine Learning.*$",
     r"^ *SMtOudOeCn.*$",  # why does this exist on pdf to text
+    r"^ *Markets.*$",
+    r"^ *.*\(NPTEL\).*$",
 
 
 
