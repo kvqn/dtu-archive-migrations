@@ -1,7 +1,8 @@
+from typing import Optional
 import pdfplumber
 import sys
 
-def extract_text(pdf_path : str, y_density : int, save_path : str | None = None):
+def extract_text(pdf_path : str, y_density : int, save_path : Optional[str] = None):
     with pdfplumber.open(pdf_path) as pdf:
             i = 0
             total_pages = len(pdf.pages)

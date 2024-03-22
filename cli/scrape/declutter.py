@@ -1,4 +1,5 @@
 import re
+from typing import Optional
 
 REMOVE_REGEXES = [
     r"^ *Delhi +Technological +University *$",
@@ -82,7 +83,7 @@ REMOVE_REGEXES_NON_MULTILINE = [
 ]
 
 
-def declutter(text : str, save_path : str | None = None):
+def declutter(text : str, save_path : Optional[str] = None):
     print("Decluttering")
     for regex in REMOVE_REGEXES_NON_MULTILINE:
         text = re.sub(regex, "", text)
